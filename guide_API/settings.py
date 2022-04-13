@@ -129,14 +129,14 @@ USE_TZ = True
 
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
+
 MEDIA_URL = '/images/avatars/'
 STATICFILES_DIRS = [
     BASE_DIR / 'static/'
 ]
 MEDIA_ROOT = BASE_DIR / 'static/images/avatars'
 
-# STATIC_ROOT =
+STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
@@ -145,6 +145,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOW_ALL_ORIGINS = True
 
-ALLOWED_HOSTS = ['.herokuapp.com']
+# ALLOWED_HOSTS = ['.herokuapp.com']
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'

@@ -16,7 +16,7 @@
               ></path>
             </svg>
           </a>
-          <h3>Study Room</h3>
+          <h3>Places to see</h3>
         </div>
         {% if room.host == request.user %}
         <div class="room__topRight">
@@ -132,7 +132,7 @@
         {% if user.is_authenticated %}
         <form action="#" method="POST" >
           {% csrf_token %}
-          <input name="body" placeholder="Write your message here..." />
+          <input name="body" placeholder="Write your comment here..." />
         </form>
         {% endif %}
       </div>
